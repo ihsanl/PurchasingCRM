@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB7E87C2-1E1E-43FB-8729-4041FB901615}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PurchasingCRM.DataLayer</RootNamespace>
+    <AssemblyName>PurchasingCRM.DataLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\ORM\Context\PurchasingCRMContext.cs" />
+    <Compile Include="Model\ORM\Entity\Appointment.cs" />
+    <Compile Include="Model\ORM\Entity\Authorities.cs" />
+    <Compile Include="Model\ORM\Entity\Bank.cs" />
+    <Compile Include="Model\ORM\Entity\BankBranch.cs" />
+    <Compile Include="Model\ORM\Entity\BaseEntity.cs" />
+    <Compile Include="Model\ORM\Entity\Brand.cs" />
+    <Compile Include="Model\ORM\Entity\Category.cs" />
+    <Compile Include="Model\ORM\Entity\Company.cs" />
+    <Compile Include="Model\ORM\Entity\CompanyBank.cs" />
+    <Compile Include="Model\ORM\Entity\CompanyFile.cs" />
+    <Compile Include="Model\ORM\Entity\CompanyPayment.cs" />
+    <Compile Include="Model\ORM\Entity\CompanyProduct.cs" />
+    <Compile Include="Model\ORM\Entity\CompanyUser.cs" />
+    <Compile Include="Model\ORM\Entity\ContactStatu.cs" />
+    <Compile Include="Model\ORM\Entity\Contract.cs" />
+    <Compile Include="Model\ORM\Entity\ContractFile.cs" />
+    <Compile Include="Model\ORM\Entity\ContractProduct.cs" />
+    <Compile Include="Model\ORM\Entity\ContractType.cs" />
+    <Compile Include="Model\ORM\Entity\Country.cs" />
+    <Compile Include="Model\ORM\Entity\Currency.cs" />
+    <Compile Include="Model\ORM\Entity\Department.cs" />
+    <Compile Include="Model\ORM\Entity\DepartmentBudget.cs" />
+    <Compile Include="Model\ORM\Entity\Form.cs" />
+    <Compile Include="Model\ORM\Entity\Group.cs" />
+    <Compile Include="Model\ORM\Entity\MessageOffer.cs" />
+    <Compile Include="Model\ORM\Entity\MessageRequest.cs" />
+    <Compile Include="Model\ORM\Entity\OfferStatu.cs" />
+    <Compile Include="Model\ORM\Entity\OfferText.cs" />
+    <Compile Include="Model\ORM\Entity\OfferTip.cs" />
+    <Compile Include="Model\ORM\Entity\Opportunity.cs" />
+    <Compile Include="Model\ORM\Entity\OpportunityCategory.cs" />
+    <Compile Include="Model\ORM\Entity\OpportunityFile.cs" />
+    <Compile Include="Model\ORM\Entity\OpportunityProduct.cs" />
+    <Compile Include="Model\ORM\Entity\OpportunityState.cs" />
+    <Compile Include="Model\ORM\Entity\PaymentMethod.cs" />
+    <Compile Include="Model\ORM\Entity\Position.cs" />
+    <Compile Include="Model\ORM\Entity\Product.cs" />
+    <Compile Include="Model\ORM\Entity\ProductType.cs" />
+    <Compile Include="Model\ORM\Entity\ProductUnit.cs" />
+    <Compile Include="Model\ORM\Entity\Province.cs" />
+    <Compile Include="Model\ORM\Entity\Request.cs" />
+    <Compile Include="Model\ORM\Entity\RequestProduct.cs" />
+    <Compile Include="Model\ORM\Entity\RequestProductOffer.cs" />
+    <Compile Include="Model\ORM\Entity\RequestState.cs" />
+    <Compile Include="Model\ORM\Entity\RequestTransfer.cs" />
+    <Compile Include="Model\ORM\Entity\Sector.cs" />
+    <Compile Include="Model\ORM\Entity\Source.cs" />
+    <Compile Include="Model\ORM\Entity\Stock.cs" />
+    <Compile Include="Model\ORM\Entity\StockType.cs" />
+    <Compile Include="Model\ORM\Entity\User.cs" />
+    <Compile Include="Model\ORM\Entity\UserDetail.cs" />
+    <Compile Include="Model\ORM\Entity\Vat.cs" />
+    <Compile Include="Model\ORM\Entity\WereHouse.cs" />
+    <Compile Include="Model\ORM\Entity\WereHouseTransfer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
